@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+# 2018-06-21
+# 写一个商品管理的程序的
+	#1、添加商品
+	#2、修改商品信息
+	#3、查看商品
+# 运行程序的时候，提示你 输入1、添加商品 输入2、修改商品信息 3、输入3、查看商品
+# 输入其他的就提示输入错误
+# 添加、修改商品前需要查看商品是否已经存在
 
 import pickle
 
@@ -7,7 +15,6 @@ f = file('product.pkl','wb')
 pickle.dump(product_info,f)
 f.close()
 # f = file("product.txt")
-
 
 def search():
     line = raw_input("Which product would you want to see?")
@@ -41,7 +48,6 @@ def modify():
         print(product_info)
     else:
         print("We don't have %s, you can not modify it. Please try to add." %(line))
-
 
 while True:
     input = int(raw_input("What do you want to do?\n"

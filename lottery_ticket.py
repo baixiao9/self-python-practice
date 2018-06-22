@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+# 2018-06-21
 # .中奖号码由6个红色球号码和1个蓝色球号码组成。 ...
 	#random模块的用法
 		#写一个函数，产生双色球号码,输入几就产生多少条，这些号码不能重复，要写到文件里面
@@ -22,11 +23,12 @@ def rea_ball():
 
 for i in range(times):
     # red = [random.randint(1, 33) for _ in range(6)]
-    # red = r.sort() 为什么不好使
+    # red = r.sort() 为什么不好使，注意.sort()和sorted的用法
     # new = sorted(red_ball)
     blue = random.randint(1, 16)
     print("%s:%s %s" %(i+1,rea_ball(),blue))
 
+#参考信息：
 # print( random.randint(1,10) )        # 产生 1 到 10 的一个整数型随机数
 # print( random.random() )             # 产生 0 到 1 之间的随机浮点数
 # print( random.uniform(1.1,5.4) )     # 产生  1.1 到 5.4 之间的随机浮点数，区间可以不是整数
